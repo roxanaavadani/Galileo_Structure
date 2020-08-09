@@ -16,4 +16,6 @@ include_directories("${Galileo_SOURCE_DIR}/bin")
 
 add_executable(Loader ${SRC})
 
-target_link_libraries(Loader)
+target_link_libraries(Loader Application)
+
+add_custom_command(TARGET Loader POST_BUILD COMMAND windeployqt ${Galileo_SOURCE_DIR}/bin)
