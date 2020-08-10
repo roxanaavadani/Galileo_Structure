@@ -15,15 +15,15 @@ namespace galileo
   // 
   // 2. A method will be provided for the framework user to assign his concrete implementation of an ApplicationModel
   //     - setApplicationModel(IApplicationModel*) : void
-  // 2.1  We will store the received application model in a member variable, and we make sure that the scenes the transient data 
+  // 2.1  We will store the received application model in a member variable, and we make sure that the scenes, the transient data 
   //      and the initial scene are defined
 
-  // 3. We create the start method which will received as arguments:
+  // 3. We create the start method which will receive as arguments:
   //          - the name of our application
   //          - the width and the height of the window
-  // 3.1 We create a QMainWindow variable hold in an unique_ptr implementation
+  // 3.1 We create a QMainWindow variable and hold it in an unique_ptr
   // 3.2 We set the main window title: setWindowTitle(..)
-  // 3.3 We resize the main window with your desired values
+  // 3.3 We resize the main window with our desired values
   // 3.4 We create the scene machine 
   //
   //    Don't forget the d-tor

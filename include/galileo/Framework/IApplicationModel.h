@@ -19,11 +19,11 @@ namespace galileo
   //    1.3 We also need to store the initial scene of the application name. We will use a string member variable
   //        And we also need a getter for the initial scene
 
-  // 2. Because this is an abstract representation for an application model. 
+  // 2. Because this is an abstract representation for an application model, 
   //    We need to provide guidance for the concrete implementation. What we actually need from 
-  //    a framework user is to provide us the model of his application(scenes and transient data).
+  //    a framework user is to provide us the model of his/her application(scenes and transient data).
   //    To guide him/her in this direction we will use 3 pure virtual methods:
-  //      - defineScene() : void
+  //      - defineScenes() : void
   //      - defineInitialScene() : void
   //      - defineTransientData() : void
   //

@@ -21,8 +21,8 @@ namespace galileo
 	//            - release() : void
 
 	// 4. In order to have the possibility to interact with the UI we need to have a reference 
-	//    to an object which has the power to modify the user interface. 
-	//    Because we whant to make Qt application, in our case that object will be a QMainWindow
+	//    to an object which has the power to communicate with the user interface. 
+	//    Because we want to make a Qt application, in our case that object will be a QMainWindow
 	//    4.1  Create a QMainWindow member variable, that will be stored in an unique_ptr
 	//    4.2  We need to have a way to populate the member variable
 	//         Create a method that will populate our QMainWindow member. 
@@ -41,7 +41,7 @@ namespace galileo
 	//    5.3  And a getter
 	//           -  getTransientDataCollection() : std::map<const std::string, const boost::any>
 
-	// 6. From inside a scene we need to have a way of announcing that we want to change your application 
+	// 6. From inside a scene we need to have a way of announcing that we want to change our application 
 	//    to another scene. To do this we can use a QT signal where we will specify the destination scene:
 	//      -  SceneChange(const std::string) : void 
 	//    Prerequisites:

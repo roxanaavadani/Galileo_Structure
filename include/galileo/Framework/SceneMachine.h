@@ -13,7 +13,7 @@ namespace galileo
   //      -  SceneMachine should derive from QObject
   //      -  Q_OBJECT define should be present at the beginning of the class
 
-  // 2. Create the SceneMachine c-tor that will recive
+  // 2. Create the SceneMachine c-tor that will receive
   //      -  the initial scene name
   //      -  the scene collection
   //      -  the transient data collection
@@ -38,18 +38,18 @@ namespace galileo
   //    4.1 Our algorithm should get the main window and the transient data informations from the current scene
   //    4.2 Once we have those informations we need to pass them to the next required active scene
   //    4.3 Before activating the next required active scene we need to make sure that we released the current scene
-  //    4.4 Once we dealt with it, we can pass the main window and the transient data informations from the 
+  //    4.4 Once we deal with it, we can pass the main window and the transient data informations from the 
   //        current scene to the next one
   //    4.5 In order to properly activate the new scene we need to create it, draw it and finally show it
   //    4.6 We also have a special scenario when the current scene in empty. What then?
   //
   // 5. We need to make sure that we call the newly created algorithm when someone from inside a scene implementation 
   //    will required a scene change. A scene change from inside a Scene implemention can be required by using the SceneChange
-  //    signal. he only thing that we need to do is to connect the signal from the Scene interface to a newly created slot 
+  //    signal. The only thing that we need to do is to connect the signal from the Scene interface to a newly created slot 
   //    that will call scene machine algorithm
   //
-  // 6. We still have one case with is not covered. We are not able to release the last activated scene. To do this we need to 
-  //    make sure that wen the application is exiting we are gong to release our last active scene. 
-  //    QT already provide a signal which we can use to determine when the application is about to exit: aboutToQuit(), 
+  // 6. We still have one case that is not covered. We are not able to release the last activated scene. To do this we need to 
+  //    make sure that when the application is exiting we are going to release our last active scene. 
+  //    QT already provides a signal which we can use to determine when the application is about to exit: aboutToQuit(), 
   //    which is defined in QCoreApplication 
   // 
