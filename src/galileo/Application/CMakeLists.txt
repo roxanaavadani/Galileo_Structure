@@ -9,6 +9,10 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${Galileo_SOURCE_DIR}/bin")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${Galileo_SOURCE_DIR}/bin")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${Galileo_SOURCE_DIR}/bin")
 
+set(Qt6WidgetsTools_DIR "${Qt6_DIR}WidgetsTools")
+set(Qt6CoreTools_DIR "${Qt6_DIR}CoreTools")
+set(Qt6GuiTools_DIR "${Qt6_DIR}GuiTools")
+
 # Find the QtWidgets library
 find_package(Qt6 COMPONENTS Core Widgets REQUIRED)
 
