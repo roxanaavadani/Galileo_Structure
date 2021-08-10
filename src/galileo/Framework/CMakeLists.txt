@@ -10,7 +10,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${Galileo_SOURCE_DIR}/bin")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${Galileo_SOURCE_DIR}/bin")
 
 # Find the QtWidgets library
-find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Core Widgets REQUIRED)
 
 # Tell CMake to run moc when necessary:
 set(CMAKE_AUTOMOC ON)
@@ -20,9 +20,9 @@ set(CMAKE_AUTOMOC ON)
 # to always look for includes there:
 include_directories("${Galileo_SOURCE_DIR}/bin")
 
-# We need add -DQT_WIDGETS_LIB when using QtWidgets in Qt 5.
-#add_definitions(${Qt5Widgets_DEFINITIONS})
+# We need add -DQT_WIDGETS_LIB when using QtWidgets in Qt 6.
+#add_definitions(${Qt6Widgets_DEFINITIONS})
 
 add_library(Framework SHARED ${SRCS} ${INCS})
 
-target_link_libraries(Framework Qt5::Widgets Qt5::Core)
+target_link_libraries(Framework Qt6::Widgets Qt6::Core)
