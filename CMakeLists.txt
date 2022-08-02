@@ -15,5 +15,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/galileo/common)
 
+list(APPEND CMAKE_PREFIX_PATH "C:/Qt/6.3.1/msvc2019_64")
+
 # add the subdirectories
 add_subdirectory(src/galileo)
